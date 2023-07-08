@@ -1,0 +1,200 @@
+@Java script Propiedades:
+document.getElementById("Id") Es una propiedad que selecciona un elemento del documento por medio del valor del atributo ("id")que se le haya asignado.
+
+.inerHTML="texto"     .inerHTML= esta propiedad trabaja con la propiedad de document document.getElementById("Id") esta es la que es encargada de leer la operacion 
+o la accion que se quiere crear ya sea (5 + 5) una simple suma o una operacion diferente, ella tiene que estar enlazada a una etiqueta html cualquiera
+como por ejemplo: <h1 id="2"> </h1> este archivo html va a ser el encargado de demostrar la operacion en la pagina independientemente de que html sea; como 
+el html "h1" es un titulo entonces la operacion se va a mostrar como titulo.
+
+@Como funciona Java Script:
+
+-En HTML, el código JavaScript se inserta entre las etiquetas <script>y </script>.
+-El mismo tambien puede ir ubicado en el <head> o <body> del html asi mismo el codigo script tambien puede ir en un archivo externo 
+el cual es el mas recomendado para mantener un orden mejor en los codigos. Ejemplo:
+-En el archivo interno:
+<script src="myScript.js"></script>
+-Mientras en el archivo externo se va a hacer todo el codigo script con el cual se va a trabajar la pagina
+-Los archivos JavaScript tienen la extensión de archivo .js . Ejem: "script.js"
+
+-Para agregar varios archivos de script a una página, use varias etiquetas de script:
+
+@Colocar scripts en archivos externos tiene algunas ventajas:
+
+-Separa HTML y código.
+-Hace que HTML y JavaScript sean más fáciles de leer y mantener.
+-Los archivos JavaScript almacenados en caché pueden acelerar la carga de la página
+
+Ejemplo
+<script src="myScript1.js"></script>
+<script src="myScript2.js"></script>
+
+@Referencias externas
+Se puede hacer referencia a un script externo de 3 maneras diferentes:
+
+-Con una URL completa (una dirección web completa)Ejemplo: <script src="https://www.w3schools.com/js/myScript.js"></script>
+-Con una ruta de archivo (como /js/) Ejemplo: <script src="/js/myScript.js"></script>
+-sin ningún camino. Ejemplo: <script src="myScript.js"></script>
+
+@JavaScript puede "mostrar" datos de diferentes maneras:
+
+1)Escribir en un elemento HTML, usando innerHTML. 
+-Uso de HTML interno
+-Para acceder a un elemento HTML, JavaScript puede usar el document.getElementById(id)método.
+-El idatributo define el elemento HTML. La innerHTML propiedad define el contenido HTML:
+
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+-El cual en la pagina se mostrara el resultado de la suma 6 + 5 el cual da 11
+
+2)Escribir en la salida HTML usando document.write().
+-Para fines de prueba, es conveniente utilizar document.write():
+<script>
+document.write(5 + 6);
+</script>
+-El uso de document.write() después de cargar un documento HTML, eliminará todo el HTML existente :
+
+3)Escribir en un cuadro de alerta, usando window.alert().
+En JavaScript, el objeto de ventana es el objeto de alcance global. 
+Esto significa que las variables, propiedades y métodos por defecto pertenecen al objeto ventana. 
+Esto también significa que especificar la windowpalabra clave es opcional:
+
+<script>
+window.alert(5 + 6);
+</script>
+Como la palabra window es opcional en el codigo, simplemente puede eliminarlo y dejar el "alert" el cual hara la misma 
+funcion como si tuviera window.
+ejem: 
+<script>
+alert(5 + 6);
+</script>
+
+4)Escribiendo en la consola del navegador, usando console.log().
+Para fines de depuración, puede llamar al console.log()método en el navegador para mostrar datos.
+ejem:
+<script>
+console.log(5 + 6);
+</script>
+
+@Imprimir JavaScript
+-JavaScript no tiene ningún objeto de impresión o métodos de impresión.
+
+-No puede acceder a los dispositivos de salida desde JavaScript.
+
+-La única excepción es que puede llamar al window.print()método en el navegador para imprimir el contenido de la ventana actual.
+De la misma manera utilizar la etiqueta de <button onclick=""><button> añadiendole la propiedad "window.print()" 
+Nota: Este codigo va en el body del html o en algun archivo externo para mantener orden
+ejemplo: 
+<button onclick="window.print()">Print this page</button>
+@Declaraciones JavaScript
+ -Las declaraciones de JavaScript se componen de:
+-Valores, operadores, expresiones, palabras clave y comentarios.
+
+@Bloques de código JavaScript
+-Las declaraciones de JavaScript se pueden agrupar en bloques de código, dentro de corchetes {...}.
+
+-El propósito de los bloques de código es definir declaraciones que se ejecutarán juntas.
+
+-Un lugar donde encontrará declaraciones agrupadas en bloques, es en funciones de JavaScript
+ejemplo de una funcion de java script:
+
+function myFunction() {
+  document.getElementById("demo1").innerHTML = "Hello Dolly!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+}
+
+@Palabras clave de JavaScript
+Las declaraciones de JavaScript a menudo comienzan con una palabra clave para
+identificar la acción de JavaScript que se va a realizar.
+
+var	Declara una variable
+
+let	Declara una variable de bloque
+
+const	Declara una constante de bloque
+
+if	Marca un bloque de declaraciones para ser ejecutado en una condición
+
+switch	Marca un bloque de declaraciones para ser ejecutado en diferentes casos
+
+for	Marca un bloque de sentencias para ser ejecutado en un bucle
+
+function	Declara una función
+
+return	Sale de una función
+
+try	Implementa el manejo de errores en un bloque de declaraciones.
+
+@¿Cuándo usar var, let o const?
+1. Siempre declara variables
+
+2. Usar siempre constsi no se debe cambiar el valor
+
+3. Usar siempre constsi no se debe cambiar el tipo (matrices y objetos)
+
+4. Solo use letsi no puede usarconst
+
+5. Úselo solo varsi DEBE admitir navegadores antiguos.
+
+@Una declaración, muchas variables
+-Puede declarar muchas variables en una declaración.
+
+-Comience la declaración con lety separe las variables con comas :
+Ejemplo:
+let person = "John Doe", carName = "Volvo", price = 200;
+
+@Valor = indefinido
+En los programas de computadora, las variables a menudo se declaran sin valor. El valor puede ser algo que debe calcularse o algo que se proporcionará más adelante, como una entrada del usuario.
+
+Una variable declarada sin valor tendrá el valor undefined.
+
+La variable carName tendrá el valor undefineddespués de la ejecución de esta declaración:
+Ejemplo:
+let carName;
+
+@Redeclaración de variables de JavaScript
+Si vuelve a declarar una variable de JavaScript declarada con var, no perderá su valor.
+
+La variable carNameseguirá teniendo el valor "Volvo" después de la ejecución de estas sentencias:
+
+Ejemplo
+var carName = "Volvo";
+var carName;
+
+@Literales de JavaScript
+-Las dos reglas de sintaxis más importantes para valores fijos son:
+
+1. Los números se escriben con o sin decimales:
+
+10.50
+
+1001
+
+2. Las cadenas son texto, escrito entre comillas simples o dobles:
+
+"John Doe"
+
+'John Doe'
+
+ @Comentarios de una sola línea
+-Los comentarios de una sola línea comienzan con //.
+
+-Cualquier texto entre //y el final de la línea será ignorado por JavaScript (no se ejecutará).
+
+// Declare x, give it the value of 5
+
+ @Comentarios de varias líneas
+-Los comentarios de varias líneas comienzan con /*y terminan con */.
+
+-Cualquier texto entre /*y */será ignorado por JavaScript.
+ejemplo
+
+/*
+The code below will change
+the heading with id = "myH"
+and the paragraph with id = "myP"
+in my web page:
+*/
+
+
